@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://picsum.photos/5" type="image/x-icon">
+
+    <title>Kiara Brache Final Exam</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: rgb(55, 55, 55);
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 100%;
+            color: whitesmoke;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: rgb(136, 9, 131);
+        }
+        header img {
+            margin: 1em;
+            border-radius: 100px;
+        }
+        header div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* ----- NAV ----- */
+        nav {
+            background-color: rgb(39, 32, 37);
+            position: sticky;
+            top: 0;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav li {
+            flex: 0 1 20%;
+        }
+        nav a {
+            display: block;
+            text-align: center;
+            background-color: black;
+            color: whitesmoke;
+            text-decoration: none;
+            padding: 1em 0;
+            font-weight: bold;
+            transition: all ease-in-out 300ms;
+        }
+        nav a:hover {
+            background-color: whitesmoke;
+            color: magenta;
+        }
+
+        /* ----- MAIN ----- */
+        main {
+            display: flex;
+            justify-content: center;
+        }
+        aside {
+            flex: 0 1 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 2vh;
+        }
+        section {
+            flex: 0 1 60%;
+        }
+        section h4 {
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 200%;
+        }
+
+        /* ----- RESULTS ----- */
+        .results-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .results-panel {
+            background-color: magenta;
+            color: whitesmoke;
+            border: 3px solid rgb(39, 32, 37);
+            border-radius: 7px;
+            display: flex;
+            gap: 15px;
+            margin: 1em;
+            padding: 1em;
+        }
+        .results-panel:hover {
+            border: 3px solid whitesmoke;
+        }
+        .results-panel img {
+            border: 3px ridge rgb(39, 32, 37);
+            border-radius: 7px;
+        }
+
+        /* ----- PRODUCT ----- */
+        .prod-details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .product-title {
+            font-variant: small-caps;
+            font-size: 150%;
+            background-color: rgb(185, 8, 126);
+            padding: 0.5em;
+            border-radius: 7px;
+            border: 2px solid rgb(39, 32, 37);
+        }
+        .product-price {
+            font-size: 150%;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px purple;
+        }
+
+        /* ----- FORM ----- */
+        form {
+            background-color: pink;
+            color: black;
+            border-radius: 7px;
+            border: 1px solid rgb(39, 32, 37);
+            padding: 1em;
+            line-height: 1.5;
+        }
+        label {
+            margin-left: 5px;
+        }
+        .form-buttons {
+            margin-top: 10px;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 3px;
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: .25rem;
+            font-weight: bold;
+            background-color: whitesmoke;
+            border: 1px solid black;
+            border-radius: 3px;
+            cursor: pointer;
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .2);
+        }
+
+        /* ----- SIMILAR PRODUCT ----- */
+        .similar-products {
+            margin-top: 10px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .similar-products img {
+            border: 3px ridge black;
+            border-radius: 7px;
+        }
+        .similar-products img:hover {
+            border: 3px ridge whitesmoke;
+        }
+
+        /* ----- FOOTER ----- */
+        footer {
+            padding: 1em 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            font-size: 75%;
+        }
+
+        /* ----- MEDIA QUERY ----- */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            header h2 {
+                font-size: 100%;
+            }
+
+            nav {
+                position: relative;
+            }
+            nav ul {
+                flex-direction: row;
+            }
+            nav a {
+                padding: 0.5em 0;
+            }
+
+            main {
+                flex-direction: column;
+            }
+
+            .results-panel {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .aside-right {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://picsum.photos/200" alt="picsum image">
+        <div>
+            <h2>Wickedness Personified</h2>
+            <h3>Put on shades to protect your eyes from the blazing Wickedness</h3>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#join">Join</a></li>
+        </ul>
+    </nav>
+    <main>
+        <aside class="aside-left">
+            <form action="#" method="get">
+                <div class="form-elements"><input type="checkbox" name="1" id="1"><label for="1">Orange-y</label></div>
+                <div class="form-elements"><input type="checkbox" name="2" id="2"><label for="2">Greenish</label></div>
+                <div class="form-elements"><input type="checkbox" name="3" id="3"><label for="3">Blue-Spotted</label>
+                </div>
+                <div class="form-elements"><input type="checkbox" name="4" id="4"><label for="4">Striped</label></div>
+                <div class="form-elements"><input type="checkbox" name="5" id="5"><label for="5">Transparent</label>
+                </div>
+                <div class="form-elements form-buttons">
+                    <input type="submit" value="Apply Filter">
+                    <input type="reset" value="Reset Form">
+                </div>
+            </form>
+        </aside>
+        <section>
+            <h4>Search Results</h4>
+            <div class="results-grid">
+                <div class="results-panel">
+                    <img src="https://picsum.photos/150" alt="" class="thumbnail">
+                    <div class="prod-details">
+                        <div class="product-title">Lorem ipsum dolor sit amet.</div>
+                        <div class="product-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem,
+                            voluptatibus. Quod, quia? Modi ratione repellat non quae commodi iure ex accusamus enim
+                            nisi, ab adipisci.</div>
+                        <div class="product-price">$59.95</div>
+                    </div>
+                </div>
+                <div class="results-panel">
+                    <img src="https://picsum.photos/152" alt="" class="thumbnail">
+                    <div class="prod-details">
+                        <div class="product-title">Reiciendis ratione necessitatibus debitis pariatur.</div>
+                        <div class="product-description">Minima fugit, eligendi nostrum iusto pariatur autem dolore
+                            laboriosam ea odit! Sit, at. Quia libero maxime explicabo aliquid. Deleniti aliquid rem
+                            fuga, autem odit nam?</div>
+                        <div class="product-price">$43.78</div>
+                    </div>
+                </div>
+                <div class="results-panel">
+                    <img src="https://picsum.photos/153" alt="" class="thumbnail">
+                    <div class="prod-details">
+                        <div class="product-title">Reiciendis eligendi facilis at distinctio.</div>
+                        <div class="product-description">Dolorum, velit laborum doloribus natus minus blanditiis eaque
+                            quis fuga voluptatibus illo vitae hic labore ratione necessitatibus pariatur maiores
+                            inventore aut molestiae deleniti odio! Omnis!</div>
+                        <div class="product-price">$23.00</div>
+                    </div>
+                </div>
+                <div class="results-panel">
+                    <img src="https://picsum.photos/154" alt="" class="thumbnail">
+                    <div class="prod-details">
+                        <div class="product-title">Sunt cumque sit minima eos!</div>
+                        <div class="product-description">Odio necessitatibus voluptates saepe, dolor dolorem adipisci
+                            minima assumenda sit exercitationem facilis, delectus veniam iste harum. Amet dignissimos
+                            quam natus consequuntur enim! A, necessitatibus porro!</div>
+                        <div class="product-price">$89.90</div>
+                    </div>
+                </div>
+                <div class="results-panel">
+                    <img src="https://picsum.photos/155" alt="" class="thumbnail">
+                    <div class="prod-details">
+                        <div class="product-title">Recusandae quisquam odit facilis aliquam!</div>
+                        <div class="product-description">Provident in fugiat autem maxime sunt est, odit esse tenetur
+                            impedit officia repudiandae. Nam similique maiores, ab distinctio nemo rerum quam architecto
+                            numquam maxime labore.</div>
+                        <div class="product-price">$100</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="aside-right">
+            <h4>Similar Products</h4>
+            <ul class="similar-products">
+                <li><a href="#"><img src="https://picsum.photos/156" alt=""></a></li>
+                <li><a href="#"><img src="https://picsum.photos/157" alt=""></a></li>
+                <li><a href="#"><img src="https://picsum.photos/158" alt=""></a></li>
+                <li><a href="#"><img src="https://picsum.photos/159" alt=""></a></li>
+                <li><a href="#"><img src="https://picsum.photos/160" alt=""></a></li>
+                <li><a href="#"><img src="https://picsum.photos/161" alt=""></a></li>
+                <li><a href="#"><img src="https://picsum.photos/162" alt=""></a></li>
+                <li><a href="#"><img src="https://picsum.photos/163" alt=""></a></li>
+                <li><a href="#"><img src="https://picsum.photos/164" alt=""></a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; <span id="copyright"></span> Kiara Brache Productions</p>
+    </footer>
+</body>
+
+</html>
+
+<script src="js/scripts.js"></script>
